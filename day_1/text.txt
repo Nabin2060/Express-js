@@ -1,0 +1,97 @@
+Express js ko lagi first 
+Steps ::
+1.npm int -y garne first mah tespaxi
+2.npm i express --save
+3.create .gitignore file yo file vitra node_modules
+ rakhanne (ani git mah yaso gare paxi push hudina j file pani git
+  mah push garnu xoina teslai yei git ignore vitra rakhane)
+4. aaba since sabai kam express le control garnu parxa vanepaxi (package.js ko "script" 
+section vitra "div mah gayera change garne node index.js ")
+
+
+5. aba terminal mah file run garna npm run dev garne.
+6.aaile index.js vitra lekheko code lai npm run dev garera herda pani jati
+ pani changes hudai janxa teo sabai lai fare changes hudai code aafai run
+  huna k garne ta vanda auta package install garne teo package ko name ho (nodemon).
+   k nodemon core package ho ta => core package vaneko hamro project mah navainahune 
+   chij Expres vayena vane hamro project chaldina tara nodemon navayene 
+   chalxa tei vara core package vanne hoina. if core hoina vane  jun 
+   hamro package.json vitra jun dependencies mah rakhnu vane pardina.
+
+7. development garda k ma switch garnu paro ta manau yadi development ko lagi vanera kuannai
+ package install gardai xu vane script( npm install i --save-dev) ani
+  package ko name jastai nodemon lekhne ra install garne. 
+
+8 yati gare paxi fare back package.json mah gayera "dev":"nodemon index.js" garne
+ yadi mah development ko phase mah jada vane nodemon rakhane 
+ vane yadi production ko phase vane "node index.js" nai rakhne.
+9.in index.js file mah gayera require("dotenv").config(); garne
+10.tespaxi instal pani garnu paro env
+11.ani create .env file
+12.add port=8000 in .env file 
+13. add .env file in gitignore mah rakhnu parxa.
+
+     insameclass ko steps
+     # express
+ 
+1. npm init -y
+2. npm i express --save
+3. create .gitignore file > Add node_modules folder
+4. create index.js file
+5. update the script as "dev": "node index.js" in the package.json
+6. in index.js,
+   const express = require('express');
+   const app =express();
+ 
+   app.get("/",(req,res)=>{
+   res.json({msg: "hello world"})
+   })
+ 
+   app.listen(8000, ()=>{
+   console.log("App is running")
+   })
+ 
+7. npm i --save-dev nodemon
+ 
+8. In package.json, scripts:{
+   "dev": "nodemon index.js",
+   "start" or "production: "node index.js"
+   }
+ 
+9. npm run dev
+ 
+10. npm i --save dotenv
+ 
+11. in index.js, require("dotenv").config()
+ 
+12. create .env file
+ 
+13. Add PORT=8000 in .env file
+ 
+14. In index.js, replace
+    const PORT=8000 => const PORT=Number(process.env.PORT)
+ 
+15. Add .env file in gitignore file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+
+
+app.use(express.json());
+yo lekhnai parxa 
+
+  note:
+   fontend bata tin trika bata data pathunna milxa 
+   1.post
+   2.put
+   3.patch
+     rah data lene tarika Queary,params,body
+     dui ota queary pathunna & le jodera pathunna sakinxa
+ 
+   IMP Note 
+console.log({query:req.query,params:req.params,body:req.body});
+ yo line vako kun query ho kun params rh kun body 
+  jastai:
+   http://localhost:9000/1?name=ram
+    query vaneko ? mark paxi ko
+    /paxi ko params ho 
+    vane body object vayo json khalko object
